@@ -1,0 +1,18 @@
+version: '2'
+services:
+  #name of the service
+  # To musisz w sumie dodac do pliku z compose ktory masz taraz
+  css-cdn:
+    # to w sumie nie jest produkcyjne - bo jak by bylo to ten CND powinien byc na jakis docker repository :) 
+    # wiesz tam margin jak by cos to pytaj :D
+    image: css-cdn:latest
+    # ports on container 8125 on localhiost:80
+    ports:
+      - 8080:8125
+    #Volume so you can  
+    volumes:
+      - ./public:/app/public
+
+
+
+
